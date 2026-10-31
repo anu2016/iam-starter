@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+# Where tokens come from and what this API accepts.
+# Keycloak runs on port 8081 (see docker-compose.yml).
+app:
+  issuer: http://localhost:8081/realms/demo
+  jwk-set-uri: http://localhost:8081/realms/demo/protocol/openid-connect/certs
+  audience: demo-api
